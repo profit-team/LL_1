@@ -1,0 +1,15 @@
+Details of calling the tcc compiler : 
+========================================================
+
+1) tcc -o  LL_1.exe main.c
+
+2) tcc -c  main.c
+
+First  line length is 24 characters (out of 998 possible)
+Second line length is 14 characters (out of 998 possible)
+
+======================================================
+
+Sobolev Venya managed to make friends the development environment (IDE Dev-C) with the Tiny C (tcc) compiler :)
+E-mail: dllbridge@gmail.com       https://a-1a.livejournal.com/35124.html 
+Last update: 02 february 2020
