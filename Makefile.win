@@ -4,8 +4,8 @@
 CPP      = tcc.exe
 CC       = tcc.exe
 WINDRES  = void.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = main.o LL.o
+LINKOBJ  = main.o LL.o
 LIBS     = -L"D:/Compilers/C/Dev-TCC_5_5_3/tcc/lib"
 INCS     = -I"D:/Compilers/C/Dev-TCC_5_5_3/tcc/include"
 CXXINCS  =
@@ -26,3 +26,6 @@ $(BIN): $(OBJ)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
+
+LL.o: LL.c
+	$(CC) -c LL.c -o LL.o $(CFLAGS)

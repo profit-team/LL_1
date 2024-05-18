@@ -1,12 +1,12 @@
 Details of calling the tcc compiler : 
 ========================================================
 
-1) tcc -o  LL_1.exe main.c
+1) tcc -o  LL_1.exe main.c LL.c
 
-2) tcc -c  main.c
+2) tcc -c  main.c LL.c
 
-First  line length is 24 characters (out of 998 possible)
-Second line length is 14 characters (out of 998 possible)
+First  line length is 29 characters (out of 998 possible)
+Second line length is 19 characters (out of 998 possible)
 
 ======================================================
 
