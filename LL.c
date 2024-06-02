@@ -22,20 +22,15 @@ int LL_push(struct LL *pLL, int n)                     //
     { 
        pLL -> pHead = p; 
        pLL -> pTail = p;
-	   
        pLL -> nCounter ++; 
-	   
+       
        return 1;
     }
       
-    pRev = pLL -> pTail;
-    
-    pRev-> pNext = p;   
-	 
-    pLL -> pTail = p; 
-	
+    pRev = pLL   -> pTail;
+    pRev-> pNext  = p;   
+    pLL -> pTail  = p; 
     pLL -> nCounter ++;    
-
 
 return 1;       
 }
