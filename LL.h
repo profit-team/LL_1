@@ -5,9 +5,19 @@
 //  In this file we call a linked list: a queue and an array.
 //  In the C language, it is required to use the struct keyword before declaring a structure variable.
 
+
 #include        <stdio.h>
 #include       <stdlib.h>
 #include       <string.h>
+
+//  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
+//
+//  Replace tab characters with spaces (1 tab = 8 spaces).
+//  The right border is at position 121.
+//
+//  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
+
+
 
 
                                                       //         This structure describes an element of a linked list. 
@@ -50,11 +60,9 @@ struct TT     *pTail;                                 //               Tail of t
 int LL_push(struct LL *pLL, int n);                   //      A prototype of a function that will add a new TT element 
                                                       //                                   to the queue with address p.             
                                                       //      This new element will contain the value n in the n field.
-
-
-
-////////////////////////////////////////////////////////    The function should print the contents of the n field for 
-void LL_Print(struct LL *pLL);                        //                                all elements of the pLL queue.
+                                                      //  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
+                                                      //     The function should print the contents of the n field for 
+void LL_Print(struct LL *pLL);                        //                                 all elements of the pLL queue.
 
 
 
