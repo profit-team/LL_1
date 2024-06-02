@@ -1,17 +1,27 @@
 
 
 
-#include       <stdio.h>
+
 #include          "LL.h"
 
 
+
+struct LL   L_1;
 
 
 ////////////////////////////////////////////////////
 int main()                                        // 
 {
-	
-    printf("Hello, World! Dima");	
+
+    strncpy(L_1.szNote, "Like a regular array.", 27); 
+
+    for(int i = 10; i < 31; i++)
+    {
+        LL_push(&L_1, i); 
+    }
+    
+    
+    LL_Print(&L_1);	
 }
 
 

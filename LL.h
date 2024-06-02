@@ -1,24 +1,25 @@
 
 
-//  19 Мая 2024 (10:02)
-//  Разработчики: Владимир Старостин и Дмитрий Соболев
-//  В этом файле мы называем связный список: очередью и массивом.
-//  В языке Си требуется перед объявлением структурной переменной использовать ключевое слово struct
+//  2 June 2024 (19:23)
+//  Developers: Vladimir Starostin and Dmitry Sobolev
+//  In this file we call a linked list: a queue and an array.
+//  In the C language, it is required to use the struct keyword before declaring a structure variable.
 
-
+#include        <stdio.h>
 #include       <stdlib.h>
+#include       <string.h>
 
 
-                                                      //             Эта структура описывает элемент связного списка. 
-                                                      //             Именно из этих элементов будет состоять очередь.
+                                                      //         This structure describes an element of a linked list. 
+                                                      //          It is these elements that the queue will consist of.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 struct TT
 {
-                                                      //          Пользовательская информация. Целое число или адрес
-      int        n;                                   //                            переменной любого типа (32 бита).
-                                                      //          конкретнее, для чего нужна переменная n?
+                                                      //            User information. An integer or the address of a 
+      int        n;                                   //                               variable of any type (32 bits).
+                                                      //          
                                                            
-struct TT   *pNext;                                   //               Указатель на следующий элемент списка-очереди.
+struct TT   *pNext;                                   //             A pointer to the next element of the queue list.
              
 };
 
@@ -27,16 +28,18 @@ struct TT   *pNext;                                   //               Указ�
 
 
 
-                                                      //                А эта структура описывает сам связный списоок.        
-                                                      //                     Как массив элементов TT (связный список). 
-////////////////////////////////////////////////////////   Мы сможем создать много очередей (элементгов структуры LL). 
+                                                      //          And this structure describes the linked list itself.    
+                                                      //                    Like an array of TT elements (linked list).
+///////////////////////////////////////////////// We will be able to create many queues (elements of the LL structure).
 struct LL
 {
         
-struct TT   *pHead;                                   //          Голова очереди. Указатель на её первый элемент (TT). 
-struct TT   *pTail;                                   //          Хвост  очереди. Указатель на последний элемент.
+struct TT     *pHead;                                 //        Head of the queue. A pointer to its first element (TT).
+struct TT     *pTail;                                 //               Tail of the queue. Pointer to the last element.
        
-      int nCounter;                                   //                                Кол-во элементов TT в очереди.
+      int   nCounter;                                 //                           Number of TT elements in the queue.
+      
+     char szNote[28];                                 //                                            Short description.
 };
 
 
@@ -44,13 +47,28 @@ struct TT   *pTail;                                   //          Хвост  о
 
 
 
-int LL_add(struct LL *pLL, int n);                    //         Прототип функции, которая добавит новый элемент TT в 
-                                                      //                                          очередь с адресом p. 
-                                                      //       Этот новый элемент будет содержать значение n в поле n. 
+int LL_push(struct LL *pLL, int n);                   //      A prototype of a function that will add a new TT element 
+                                                      //                                   to the queue with address p.             
+                                                      //      This new element will contain the value n in the n field.
 
 
 
-////////////////////////////////////////////////////////  Функция должна распечатать содержимое поля n для всех 
-void LL_Print(struct LL *pLL);                        //                                  элементов очереди pLL.
+////////////////////////////////////////////////////////    The function should print the contents of the n field for 
+void LL_Print(struct LL *pLL);                        //                                all elements of the pLL queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
