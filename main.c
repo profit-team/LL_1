@@ -20,7 +20,9 @@ int main()                                        //
         LL_push(&L_1, i); 
     }
     
-    
+    printf("The pop function returned: %d\n", LL_pop(&L_1) );
+    printf("The pop function returned: %d\n", LL_pop(&L_1) );   
+     
     LL_Print(&L_1);	
 }
 
