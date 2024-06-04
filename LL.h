@@ -1,6 +1,6 @@
 
 
-//  2 June 2024 (19:23)
+//  4 June 2024 (20:48)
 //  Developers: Vladimir Starostin and Dmitry Sobolev
 //  In this file we call a linked list: a queue and an array.
 //  In the C language, it is required to use the struct keyword before declaring a structure variable.
@@ -68,6 +68,7 @@ int LL_pop(struct LL *pLL);                           //             A function 
                                                       //  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
                                                       //     The function should print the contents of the n field for 
 void LL_Print(struct LL *pLL);                        //                                 all elements of the pLL queue.
+
 
 
 
