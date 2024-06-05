@@ -6,7 +6,7 @@
 
 
 
-struct LL   L_1;
+struct queue   L_1;
 
 
 ////////////////////////////////////////////////////
@@ -17,13 +17,13 @@ int main()                                        //
 
     for(int i = 10; i < 31; i++)
     {
-        LL_push(&L_1, i); 
+        queue_push(&L_1, i); 
     }
     
-    printf("The pop function returned: %d\n", LL_pop(&L_1) );
-    printf("The pop function returned: %d\n", LL_pop(&L_1) );   
+    printf("The pop function returned: %d\n", queue_pop(&L_1) );
+    printf("The pop function returned: %d\n", queue_pop(&L_1) );   
      
-    LL_Print(&L_1);	
+    queue_Print(&L_1);	
 }
 
 

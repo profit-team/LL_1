@@ -1,6 +1,6 @@
 
 
-//  4 June 2024 (20:48)
+//  5 June 2024 (08:22)
 //  Developers: Vladimir Starostin and Dmitry Sobolev
 //  In this file we call a linked list: a queue and an array.
 //  In the C language, it is required to use the struct keyword before declaring a structure variable.
@@ -44,7 +44,7 @@ struct TT   *pNext;                                   //             A pointer t
                                                       //          And this structure describes the linked list itself.    
                                                       //                    Like an array of TT elements (linked list).
 ///////////////////////////////////////////////// We will be able to create many queues (elements of the LL structure).
-struct LL
+struct queue
 {
         
 struct TT     *pHead;                                 //        Head of the queue. A pointer to its first element (TT).
@@ -60,16 +60,30 @@ struct TT     *pTail;                                 //               Tail of t
 
 
 
-int LL_push(struct LL *pLL, int n);                   //      A prototype of a function that will add a new TT element 
+int  queue_push(struct queue *pLL, int n);            //      A prototype of a function that will add a new TT element 
                                                       //                                 to the queue with address pLL.
                                                       //      This new element will contain the value n in the n field.
-                                                      //  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
-int LL_pop(struct LL *pLL);                           //             A function that removes an element from the queue.                                                                                              
-                                                      //  - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
+                                                      //                                                  -------------
+int  queue_pop(struct queue *pLL);                    //             A function that removes an element from the queue.                                                                                              
+                                                      //                                                  -------------
                                                       //     The function should print the contents of the n field for 
-void LL_Print(struct LL *pLL);                        //                                 all elements of the pLL queue.
+void queue_Print(struct queue *pLL);                  //                                 all elements of the pLL queue.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------
 
 
 

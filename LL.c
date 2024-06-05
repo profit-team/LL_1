@@ -9,7 +9,7 @@
 
 //                                               The function will add a new TT element to the queue with address pLL. 
 /////////////////////////////////////////////////////////    This new element will contain the value n in the n field.  
-int LL_push(struct LL *pLL, int n)                     //
+int queue_push(struct queue *pLL, int n)               //
 {
 	 
     struct TT   *p     = malloc(sizeof(struct TT) ),  
@@ -36,7 +36,7 @@ return 2;
 
 //  
 /////////////////////////////////////////////////////////
-int LL_pop(struct LL *pLL)                             //
+int queue_pop(struct queue *pLL)                       //
 {
     
     if(pLL -> nCounter == 0) return 0;  
@@ -60,7 +60,7 @@ return n;                                              //                  Retur
 
 //                                                       This function is only needed during the list testing period.
 ////////////////////////////////////////////////////////   The function should print the contents of the n field for 
-void LL_Print(struct LL *pLL)                         //                               all elements of the pLL queue.
+void queue_Print(struct queue *pLL)                   //                               all elements of the pLL queue.
 {
 
      struct TT   *p = pLL->pHead;
