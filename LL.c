@@ -101,6 +101,29 @@ struct TT*  queue_front(struct queue *pLL)             //
 
 
 
+
+
+/////////////////////////////////////////////////////////
+int* queue_get(struct queue *pLL, int i)               //
+{
+	
+	 int nCount = 0;
+	
+	 struct TT   *p = pLL->pHead;
+     
+	 while(p != 0)
+     {
+	    if(i == nCount) return &(p->n);
+	            nCount ++;   p = p->pNext; 
+     }
+     
+return 0;     
+}
+
+
+
+
+
 //                                                        This function is only needed during the list testing period.
 ////////////////////////////////////////////////////////    The function should print the contents of the n field for 
 void queue_monitor(struct queue *pLL)                 //                                all elements of the pLL queue.
@@ -146,15 +169,6 @@ void queue_monitor(struct queue *pLL)                 //                        
          sprintf(LL_info.sz2, "There are %d elements in this queue:\n"     , pLL->nCounter);  return;
 L_01:    sprintf(LL_info.sz2, "%d elements out of %d are shown: \n", nCount, pLL->nCounter);  return; 
 }
-
-
-
-
-
-
-
-
-
 
 
 

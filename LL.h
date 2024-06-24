@@ -1,6 +1,6 @@
 
 
-//  22 June 2024 (20:28)
+//  24 June 2024 (19:32)
 //  Developers: Vladimir Starostin and Dmitry Sobolev
 //  In this file we call a linked list: a queue and an array.
 //  In the C language, it is required to use the struct keyword before declaring a structure variable.
@@ -81,13 +81,33 @@ int         queue_push (struct queue *pLL, int n);    //     A prototype of a fu
 int         queue_pop  (struct queue *pLL);           //            A function that removes an element from the queue.
 int         queue_empty(struct queue *pLL);           //                                           Returns 1 if empty. 
 int         queue_size (struct queue *pLL);           //  
-                                         
-                                                      //    The function should print the contents of the n field for 
-void      queue_monitor(struct queue *pLL);           //                                all elements of the pLL queue.
-
-
+                                        
 struct TT*  queue_back (struct queue *pLL);           // 
 struct TT*  queue_front(struct queue *pLL);           // 
+
+//  -  The functions are designed for convenience  -  //    The function should print the contents of the n field for 
+void      queue_monitor(struct queue *pLL);           //                                all elements of the pLL queue.
+int*      queue_get    (struct queue *pLL, int i); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,7 +121,7 @@ struct TT*  queue_front(struct queue *pLL);           //
 
 // --------------------------------------------------------------
 
-
+// * * * * * * * * * * * * * * * * * * * * * * * * *  //
 
 
 
