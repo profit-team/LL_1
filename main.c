@@ -35,7 +35,7 @@ L_01:  switch(n)
           case  1: printf("\t\t\t\t\t- -== select 1 ==- -\n");   select_1();	 break;
           case  2: printf("\t\t\t\t\t- -== select 2 ==- -\n");   select_2();	 break;    
           case  3: printf("\t\t\t\t\t- -== select 3 ==- -\n");   select_3();	 break; 
-		  default: printf("\t\t!!!  The item number %d is incorrectly selected  !!!\n", n); 	   	
+          default: printf("\t\t!!!  The item number %d is incorrectly selected  !!!\n", n); 	   	
        }
        
        printf("\n - - - - - - - - - \n");
@@ -43,7 +43,7 @@ L_01:  switch(n)
        printf("1, 2, or 3 - select the appropriate item. \n");    
        scanf("%d", &n);  
        
-	   if(n == 0)  {  printf("Goodbye \n");  return 0; }
+       if(n == 0)  {  printf("Goodbye \n");  return 0; }
        
        goto L_01;      
 }
@@ -56,7 +56,7 @@ L_01:  switch(n)
 void select_1()                                       // 
 {   		
     
-	printf("queue_size =%3d\n", queue_size(&L_1) );
+    printf("queue_size =%3d\n", queue_size(&L_1) );
 
     for(int i = 0; i < 7; i++)
     {
@@ -71,7 +71,7 @@ void select_1()                                       //
     printf("The pop function returned: %d\n", queue_pop(&L_1) );
     printf("The pop function returned: %d\n", queue_pop(&L_1) );   
      
-    queue_monitor(&L_1);	                          //    Filling in the structure (extern struct info Cinfo) with 
+    queue_monitor(&L_1);	                      //    Filling in the structure (extern struct info Cinfo) with 
                                                       //                           information about the linked list.
     print_info();                                     //                    We display it in our console application.     	
 }
@@ -90,7 +90,7 @@ void select_2()                                       //
 	
     queue_monitor(&L_1);
     
-	print_info(); 	
+    print_info(); 	
 }
 
 
@@ -106,7 +106,7 @@ void select_3()                                       //
     
     struct TT  *p = L_2.pHead;     
     	
-	for(int i = 0; p != 0; i++)
+    for(int i = 0; p != 0; i++)
     {
     	
         printf("L_2[%2d] = %3d \n", i, p->n);
@@ -116,7 +116,7 @@ void select_3()                                       //
 	
     queue_monitor(&L_2);
     
-	print_info(); 	
+    print_info(); 	
 }
 
 
