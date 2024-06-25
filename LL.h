@@ -1,6 +1,6 @@
 
 
-//  24 June 2024 (19:32)
+//  25 June 2024 (14:17)
 //  Developers: Vladimir Starostin and Dmitry Sobolev
 //  In this file we call a linked list: a queue and an array.
 //  In the C language, it is required to use the struct keyword before declaring a structure variable.

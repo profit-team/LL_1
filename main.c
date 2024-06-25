@@ -11,13 +11,15 @@
 struct queue   L_1,
                L_2;
 
+int       dialog();  
+
+void  print_info();   
+
+void    select_1();
+void    select_2(); 
+void    select_3(); 
 
 
-void print_info();   
-
-void   select_1();
-void   select_2(); 
-void   select_3(); 
 
 ////////////////////////////////////////////////////////
 int main()                                            // 
@@ -29,26 +31,40 @@ int main()                                            //
     for(int i = 0; i < 15; i++)  queue_push(&L_2, 200 + i);   strncpy(L_2.szNote, "init struct queue L_2", 27); 
   
   
-L_01:  switch(n)
+L_01:  printf("\t\t\t\t\t- -== select %d ==- -\n", n);
+
+       switch(n)
        {
     	
-          case  1: printf("\t\t\t\t\t- -== select 1 ==- -\n");   select_1();	 break;
-          case  2: printf("\t\t\t\t\t- -== select 2 ==- -\n");   select_2();	 break;    
-          case  3: printf("\t\t\t\t\t- -== select 3 ==- -\n");   select_3();	 break; 
-          default: printf("\t\t!!!  The item number %d is incorrectly selected  !!!\n", n); 	   	
+          case  1:  select_1();	   break;
+          case  2:  select_2();	   break;    
+          case  3:  select_3();	   break; 
+          default:  printf("\t\t   Error !  The item number %d is incorrectly selected. \n", n); 	   	
        }
+           
+       while(n = dialog() ) goto L_01;
        
-       printf("\n - - - - - - - - - \n");
-       printf("0 - Quit \n");
-       printf("1, 2, or 3 - select the appropriate item. \n");    
-       scanf("%d", &n);  
-       
-       if(n == 0)  {  printf("Goodbye \n");  return 0; }
-       
-       goto L_01;      
+return 0;             
 }
 
 
+
+
+////////////////////////////////////////////////////////
+int dialog()                                          // 
+{
+
+    int n = 0; 
+
+    printf("\n - - - - - - - - - \n");
+    printf("0 - Quit \n");
+    printf("1, 2, or 3 - select the appropriate item. \n");    
+    scanf("%d", &n); 
+    
+    if(n == 0)  printf("Goodbye \n");  
+    
+return n; 
+}
 
 
 
