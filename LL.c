@@ -107,11 +107,11 @@ struct TT*  queue_front(struct queue *pLL)             //
 int* queue_get(struct queue *pLL, int i)               //
 {
 	
-	 int nCount = 0;
+     int nCount = 0;
 	
-	 struct TT   *p = pLL->pHead;
+     struct TT   *p = pLL->pHead;
      
-	 while(p != 0)
+     while(p != 0)
      {
 	    if(i == nCount) return &(p->n);
 	            nCount ++;   p = p->pNext; 
