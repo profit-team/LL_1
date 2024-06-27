@@ -88,8 +88,7 @@ struct TT*  queue_front(struct queue *pLL);           //
 //  -  The functions are designed for convenience  -  //    The function should print the contents of the n field for 
 void      queue_monitor(struct queue *pLL);           //                                all elements of the pLL queue.
 int*      queue_get    (struct queue *pLL, int i); 
-
-
+int       queue_clear  (struct queue *pLL);
 
 
 

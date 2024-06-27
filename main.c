@@ -18,7 +18,7 @@ void  print_info();
 void    select_1();
 void    select_2(); 
 void    select_3(); 
-
+void    select_4(); 
 
 
 ////////////////////////////////////////////////////////
@@ -39,10 +39,14 @@ L_01:  printf("\t\t\t\t\t- -== select %d ==- -\n", n);
           case  1:  select_1();	   break;
           case  2:  select_2();	   break;    
           case  3:  select_3();	   break; 
+          case  4:  select_4();	   break;            
           default:  printf("\t\t   Error !  The item number %d is incorrectly selected. \n", n); 	   	
        }
            
        while(n = dialog() ) goto L_01;
+       
+    queue_clear(&L_1);    printf("Clear L_1, " );	
+    queue_clear(&L_2);    printf("Clear L_2.\n");        
        
 return 0;             
 }
@@ -58,7 +62,7 @@ int dialog()                                          //
 
     printf("\n - - - - - - - - - \n");
     printf("0 - Quit \n");
-    printf("1, 2, or 3 - select the appropriate item. \n");    
+    printf("1, 2, 3 or 4 - select the appropriate item. \n");     
     scanf("%d", &n); 
     
     if(n == 0)  printf("Goodbye \n");  
@@ -134,6 +138,21 @@ void select_3()                                       //
     
     print_info(); 	
 }
+
+
+
+
+
+////////////////////////////////////////////////////////
+void select_4()                                       // 
+{
+
+    queue_clear  (&L_1);    printf("Clear L_1...\n");	
+    queue_monitor(&L_1);
+    
+    print_info(); 	
+}
+
 
 
 

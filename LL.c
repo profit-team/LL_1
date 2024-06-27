@@ -121,6 +121,36 @@ return 0;
 }
 
 
+////////////////////////////////////////////////////////
+int  queue_clear (struct queue *pLL)                  //
+{
+        
+     int nCount = 0;
+	
+     struct TT   *p  = pLL->pHead,
+                 *p2 = 0;
+     
+     while(p != 0)
+     {
+	    
+           nCount ++;   
+           
+           p2 = p->pNext; 
+           
+           free(p);
+           
+           p = p2;
+     }
+     
+     pLL->nCounter = 0;
+     pLL->pHead    = 0;
+     pLL->pTail    = 0;
+     strcpy(pLL->szNote, "clear");
+          
+return nCount;         
+}
+
+
 
 
 
