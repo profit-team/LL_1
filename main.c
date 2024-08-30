@@ -91,7 +91,7 @@ void select_1()                                       //
     printf("The pop function returned: %d\n", queue_pop(&L_1) );
     printf("The pop function returned: %d\n", queue_pop(&L_1) );   
      
-    queue_monitor(&L_1);	                      //    Filling in the structure (extern struct info Cinfo) with 
+    queue_monitor(&L_1);	                          //    Filling in the structure (extern struct info Cinfo) with 
                                                       //                           information about the linked list.
     print_info();                                     //                    We display it in our console application.     	
 }
@@ -142,7 +142,7 @@ void select_3()                                       //
 
 
 
-
+//                    The function clears the L_1 queue.
 ////////////////////////////////////////////////////////
 void select_4()                                       // 
 {
